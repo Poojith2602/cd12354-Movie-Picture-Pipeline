@@ -487,7 +487,3 @@ GitHub Actions is used to automate the CI/CD process.
 ## License
 
 [License](LICENSE.md)
-
-
-
- 
