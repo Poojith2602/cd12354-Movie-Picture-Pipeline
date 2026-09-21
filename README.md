@@ -465,7 +465,29 @@ kustomize edit set image backend=<ECR_REPO_URL>:<NEW_TAG_HERE>
 # Apply the manifests to the cluster
 kustomize build | kubectl apply -f -
 ```
+## Deployment
 
+### Frontend
+
+http://ac6e3a9cafa9f44d186b5c925823c94c-909358558.us-east-1.elb.amazonaws.com
+
+### Backend
+
+http://a3985e57a197c44039771a15bfd35ad8-1288852308.us-east-1.elb.amazonaws.com
+
+### CI/CD
+
+GitHub Actions is used to automate the CI/CD process.
+
+- Frontend CI: Lint, test, and build
+- Backend CI: Lint, test, and build
+- Frontend CD: Build Docker image, push to Amazon ECR, and deploy to Amazon EKS
+- Backend CD: Build Docker image, push to Amazon ECR, and deploy to Amazon EKS
+- Docker images are tagged using the Git commit SHA
 ## License
 
 [License](LICENSE.md)
+
+
+
+ 
